@@ -1,10 +1,12 @@
 # Get it running
 
-## Run on Heroku
+## Preparation Step 1 - Run on Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-## Run locally
+## Preparation Step 2 (Optional) - Run locally
+
+(Having deployed to Heroku feel free to move directly to the technical challenge.)
 
 ### Prerequisites
 
