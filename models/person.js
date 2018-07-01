@@ -12,16 +12,16 @@ module.exports = (sequelize, DataTypes) => {
       classMethods: {
         associate: function(models) {
           // associations can be defined here
-          _.sortBy(models, function(m) { 
-            return m.toDate().getTime();
-          }
+          
         }
       }
     }
   );
-
+  var sortDates= _.sortBy(models, function(m) { 
+            return m.toDate().getTime();
+    }
   Person.prototype.fechas = function() {
-    return this.getDataValue("fechas");
+    return this.getDataValue("sortDates");
   };
   return Person;
 };
