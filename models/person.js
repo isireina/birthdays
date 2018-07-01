@@ -1,4 +1,6 @@
 "use strict";
+var f= new Date();
+
 module.exports = (sequelize, DataTypes) => {
   var Person = sequelize.define(
     "Person",
@@ -10,14 +12,16 @@ module.exports = (sequelize, DataTypes) => {
       classMethods: {
         associate: function(models) {
           // associations can be defined here
+          _.sortBy(models, function(m) { 
+            return m.toDate().getTime();
+          }
         }
       }
     }
   );
 
-  Person.prototype.age = function() {
-    return this.getDataValue("age");
+  Person.prototype.fechas = function() {
+    return this.getDataValue("fechas");
   };
-
   return Person;
 };
