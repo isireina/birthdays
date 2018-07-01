@@ -9,7 +9,7 @@ router.get("/", function(req, res, next) {
       `SELECT
           name,
           birth_date,
-          EXTRACT(DATE FROM fechas(birth_date)) AS fechas
+          EXTRACT(DAY,MONTH FROM fechas(birth_date)) AS fechas
       FROM
           "People"
       ORDER BY
